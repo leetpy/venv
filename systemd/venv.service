@@ -1,0 +1,11 @@
+[Unit]
+Description = Env manager
+After=network.target
+Requires=network.target
+
+[Service]
+Type=simple
+ExecStart = /usr/bin/venv -config /etc/venv/venv.conf
+
+[Install]
+WantedBy=multi-user.target
